@@ -1,0 +1,30 @@
+Sure! Here's an example of PHP code for the selection sort algorithm:
+
+```php
+function selectionSort($arr) {
+    $n = count($arr);
+    
+    for ($i = 0; $i < $n - 1; $i++) {
+        $minIndex = $i;
+        
+        for ($j = $i + 1; $j < $n; $j++) {
+            if ($arr[$j] < $arr[$minIndex]) {
+                $minIndex = $j;
+            }
+        }
+        
+        $temp = $arr[$i];
+        $arr[$i] = $arr[$minIndex];
+        $arr[$minIndex] = $temp;
+    }
+    
+    return $arr;
+}
+
+// Usage example:
+$numbers = [5, 3, 8, 2, 1];
+$sortedNumbers = selectionSort($numbers);
+print_r($sortedNumbers);
+```
+
+This code defines a function called `selectionSort` that takes an array as input and sorts it using the selection sort algorithm. The sorted array is then returned. You can test it out by providing an array of numbers and printing the sorted result. Let me know if you have any questions!
